@@ -21,8 +21,8 @@ export const List = styled.ul`
       top: 0;
       transform: scale(0.5);
       z-index: 1;
-      width: 120%;
-      height: 12%;
+      width: 500px;
+      height: 110px;
     `}
 
   &::-webkit-scrollbar {
