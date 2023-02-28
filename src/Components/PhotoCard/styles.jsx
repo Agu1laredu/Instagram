@@ -7,16 +7,17 @@ export const ImgWrapper=styled.div`
   overflow: hidden;
   padding: 56.25% 0 0 0;
   position: relative;
-  width: 100%; 
+  width: 98%; 
 `
 export const Img=styled.img`
   ${fadeIn()}
+  border-radius: 20px;
   box-shadow: 0 10px 14px rgba(0, 0, 0, .2);
-  height: 100%;
+  height: 90%;
   object-fit: cover;
   position: absolute;
   top: 0;
-  width: 100%;
+  width: 90%;
 `
 export const Button=styled.button`
   display: flex;

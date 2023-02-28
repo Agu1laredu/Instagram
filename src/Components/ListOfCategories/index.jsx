@@ -1,20 +1,28 @@
 import React, { Fragment, useEffect, useState } from "react";
 import { Category } from "../Category";
-
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { List, Item } from "./styles";
 
-export const ListOfCategories = () => {
+export function useCategoriesData() {
   const [categories, setCategories] = useState([]);
-  const [showFixed, setShowFixed] = useState(false);
+  const [Loading, setLoading] = useState(false);
 
   //fetch Categories
   useEffect(function () {
+    setLoading(true);
     fetch("https://petgram-server-leidy-daza-leidydaza.vercel.app/categories")
       .then((res) => res.json())
       .then((response) => {
         setCategories(response);
+        setLoading(false);
       });
   }, []);
+  return { categories, Loading };
+}
+
+export const ListOfCategories = () => {
+  const { categories, Loading } = useCategoriesData();
+  const [showFixed, setShowFixed] = useState(false);
 
   //categoires show  scroll
   useEffect(function () {
@@ -29,12 +37,25 @@ export const ListOfCategories = () => {
   });
 
   const renderList = (fixed) => (
-    <List className={fixed ? "fixed" : ""}>
-      {categories.map((category) => (
-        <Item key={category.id}>
-          <Category {...category} />
+    <List fixed={fixed}>
+      {Loading ? (
+        <Item key="loading">
+          <AiOutlineLoading3Quarters
+            style={{
+              position: "absolute",
+              left: "40%",
+              top: "40%",
+              fontSize: "100px",
+            }}
+          />
         </Item>
-      ))}
+      ) : (
+        categories.map((category) => (
+          <Item key={category.id}>
+            <Category {...category} />
+          </Item>
+        ))
+      )}
     </List>
   );
 
