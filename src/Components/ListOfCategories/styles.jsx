@@ -3,8 +3,8 @@ import styled, { css } from "styled-components";
 export const List = styled.ul`
   display: flex;
   overflow: scroll;
-  width: 108%;
-  margin-left: -25px;
+  width: 110%;
+  margin-left: -50px;
   margin-bottom: 20px;
   ${(props) =>
     props.fixed &&
