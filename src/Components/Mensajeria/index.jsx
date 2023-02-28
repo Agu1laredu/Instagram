@@ -7,7 +7,7 @@ export const Mensajeria = () => (
     <MdFavoriteBorder
       style={{
         position: "absolute",
-        left: "72%",
+        left: "80%",
         top: "25px",
         fontSize: "30px",
       }}
@@ -15,7 +15,7 @@ export const Mensajeria = () => (
     <AiOutlineMessage
       style={{
         position: "absolute",
-        left: "82%",
+        left: "90%",
         top: "25px",
         fontSize: "30px",
       }}
