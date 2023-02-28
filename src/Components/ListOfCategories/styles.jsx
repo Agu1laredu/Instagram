@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 export const List = styled.ul`
   display: flex;
   overflow: scroll;
-  width: 100%;
+  width: 102%;
   margin-left: -25px;
   margin-bottom: 20px;
   ${(props) =>
