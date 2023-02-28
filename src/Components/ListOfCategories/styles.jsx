@@ -12,7 +12,7 @@ export const List = styled.ul`
       background: #fff;
       border-radius: 60px;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-      left: -5px;
+      left: -20px;
       margin: 0 auto;
       max-width: 500px;
       padding: 8px;
