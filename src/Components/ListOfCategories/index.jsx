@@ -44,8 +44,8 @@ export const ListOfCategories = () => {
             style={{
               position: "absolute",
               left: "40%",
-              top: "40%",
-              fontSize: "100px",
+              top: "10%",
+              fontSize: "80px",
             }}
           />
         </Item>
