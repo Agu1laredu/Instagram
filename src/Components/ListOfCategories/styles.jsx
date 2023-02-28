@@ -12,15 +12,17 @@ export const List = styled.ul`
       background: #fff;
       border-radius: 60px;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-      left: -20px;
+      left: -50px;
       margin: 0 auto;
-      max-width: 500px;
+      max-width: 700px;
       padding: 8px;
       position: fixed;
       right: 0;
       top: 0;
       transform: scale(0.5);
       z-index: 1;
+      width: 120%;
+      height: 12%;
     `}
 
   &::-webkit-scrollbar {
