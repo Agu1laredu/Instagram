@@ -24,7 +24,6 @@
   "eslintConfig": {
     "parser": "babel-eslint",
     "extends": [
-      "./node_modules/standar/eslintrc.json",
       "react-app",
       "react-app/jest"
     ]
