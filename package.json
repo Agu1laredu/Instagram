@@ -27,11 +27,7 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "parser": "babel-eslint",
-    "extends": [
-      "standard",
-      "standard-jsx"
-    ]
+   
   },
   "browserslist": {
     "production": [
@@ -48,7 +44,6 @@
   "devDependencies": {
     "eslint": "^8.36.0",
     "eslint-config-react-app": "^7.0.1",
-    "eslint-config-standard": "^17.0.0",
     "eslint-loader": "^4.0.2"
   }
 }
