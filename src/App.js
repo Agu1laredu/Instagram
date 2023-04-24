@@ -3,7 +3,6 @@ import { ListOfCategories } from './Components/ListOfCategories';
 import { ListOfPhotoCards } from './container/ListOfPhotoCards';
 import { Logo } from './Components/Logo';
 import { GlobalStyle } from './styles/GlobalStyles';
-// import { PhotoCardWithQuery } from './container/PhotoCardWithQuery.jsx';
 
 export const App = () => {
   const urlParams = new window.URLSearchParams(window.location.search);
@@ -13,7 +12,6 @@ export const App = () => {
       <GlobalStyle />
       <Logo />
       {detailId ? (
-        // <PhotoCardWithQuery id={detailId} />
         <div>
           <h1 style={{ margin: 'auto', textAlign: 'center' }}>
             te falta practica bro
