@@ -1,29 +1,15 @@
-import React from "react";
-import { useQuery, gql } from "@apollo/client";
-import { PhotoCard } from "../PhotoCard";
+import React from 'react';
+import { PhotoCard } from '../PhotoCard/index.jsx';
 
-const ANIMALS_QUERY = gql`
-  query getPhotos {
-    photos {
-      id
-      categoryId
-      src
-      likes
-      userId
-      liked
-    }
-  }
-`;
-
-export const ListOfPhotoCards = () => {
-  const { data, loading, error } = useQuery(ANIMALS_QUERY); // destructuras la data y el estado de loading y error
-  if (loading) return "Loading..."; // manejas el estado para que no te saque error mientras hace el fetch
-  if (error) return <pre>{error.message}</pre>;
+export const ListOfPhotoCardsComponent = ({ data: { photos = [] } } = {}) => {
   return (
-    <ul>
-      {data.photos.map((photo) => (
-        <PhotoCard key={photo.id} {...photo} />
-      ))}
-    </ul>
+    // eslint-disable-next-line react/jsx-filename-extension
+    <div>
+      <ul>
+        {photos.map((photo) => (
+          <PhotoCard key={photo.id} {...photo} />
+        ))}
+      </ul>
+    </div>
   );
 };

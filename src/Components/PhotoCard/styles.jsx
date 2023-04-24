@@ -1,21 +1,20 @@
-import styled from 'styled-components'
-import{fadeIn}from '../../styles/animation'
-
+import styled from 'styled-components';
+import { fadeIn } from '../../styles/animation.jsx';
 
 export const Article = styled.article`
   min-height: 200px;
-`
+`;
 
-export const ImgWrapper=styled.div`
+export const ImgWrapper = styled.div`
   display: block;
   height: 0;
   overflow: hidden;
   padding: 56.25% 0 0 0;
   position: relative;
-  width: 110%; 
+  width: 110%;
   margin-left: -40px;
-`
-export const Img=styled.img`
+`;
+export const Img = styled.img`
   ${fadeIn()}
   box-shadow: 0 10px 14px rgba(0, 0, 0, .2);
   height: 100%;
@@ -24,8 +23,8 @@ export const Img=styled.img`
   top: 0;
   margin: auto;
   width: 110%;
-`
-export const Button=styled.button`
+`;
+export const Button = styled.button`
   display: flex;
   position: relative;
   left: -40px;
@@ -35,4 +34,4 @@ export const Button=styled.button`
   & svg {
     margin-right: 4px;
   }
-`
+`;

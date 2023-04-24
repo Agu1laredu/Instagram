@@ -1,5 +1,6 @@
-import * as React from "react";
-import { Svg } from './styles';
+/* eslint-disable react/jsx-filename-extension */
+import * as React from 'react';
+import { Svg } from './styles.jsx';
 
 export const Logo = (props) => (
   <Svg
@@ -8,7 +9,7 @@ export const Logo = (props) => (
     height={122}
     preserveAspectRatio="xMidYMid"
     style={{
-      background: "0 0",
+      background: '0 0',
     }}
     viewBox="56.034 14 387.931 122"
     {...props}
@@ -95,4 +96,3 @@ export const Logo = (props) => (
     </g>
   </Svg>
 );
-

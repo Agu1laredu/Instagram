@@ -1,7 +1,8 @@
-import React, { Fragment, useEffect, useState } from "react";
-import { Category } from "../Category";
-import { AiOutlineLoading3Quarters } from "react-icons/ai";
-import { List, Item } from "./styles";
+/* eslint-disable react/jsx-filename-extension */
+import React, { Fragment, useEffect, useState } from 'react';
+import { Category } from '../Category/index.jsx';
+import { AiOutlineLoading3Quarters } from 'react-icons/ai';
+import { List, Item } from './styles.jsx';
 
 export function useCategoriesData() {
   const [categories, setCategories] = useState([]);
@@ -10,7 +11,7 @@ export function useCategoriesData() {
   //fetch Categories
   useEffect(function () {
     setLoading(true);
-    fetch("https://petgram-server-leidy-daza-leidydaza.vercel.app/categories")
+    fetch('https://petgram-server-leidy-daza-leidydaza.vercel.app/categories')
       .then((res) => res.json())
       .then((response) => {
         setCategories(response);
@@ -26,14 +27,14 @@ export const ListOfCategories = () => {
 
   //categoires show  scroll
   useEffect(function () {
-    const onScroll = (e) => {
+    const onScroll = () => {
       const newShowFixed = window.scrollY > 200;
       showFixed !== newShowFixed && setShowFixed(newShowFixed);
     };
 
-    document.addEventListener("scroll", onScroll);
+    document.addEventListener('scroll', onScroll);
 
-    return () => document.removeEventListener("scroll", onScroll);
+    return () => document.removeEventListener('scroll', onScroll);
   });
 
   const renderList = (fixed) => (
@@ -42,10 +43,10 @@ export const ListOfCategories = () => {
         <Item key="loading">
           <AiOutlineLoading3Quarters
             style={{
-              position: "absolute",
-              left: "40%",
-              top: "10%",
-              fontSize: "90px",
+              position: 'absolute',
+              left: '40%',
+              top: '10%',
+              fontSize: '90px',
             }}
           />
         </Item>

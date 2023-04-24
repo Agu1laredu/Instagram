@@ -1,20 +1,18 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import "./index.css";
-
-import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client' // ASÍ
-import { App } from './App'
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import { ApolloProvider } from 'react-apollo';
+import ApolloClient from 'apollo-boost';
+import { App } from './App';
+import './index.css';
 
 const client = new ApolloClient({
   uri: 'https://petgram-server-anthony-3vrjckvsb.vercel.app/graphql',
-  cache: new InMemoryCache()
-})
+});
+const container = document.getElementById('root');
+const root = createRoot(container);
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <ApolloProvider client={client}>
     <App />
   </ApolloProvider>
 );
-
-

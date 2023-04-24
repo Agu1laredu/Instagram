@@ -1,18 +1,33 @@
-import React from "react";
-import { ListOfCategories } from "./Components/ListOfCategories";
-import { ListOfPhotoCards } from "./Components/ListOFPhotoCards";
+import React, { Fragment } from 'react';
+import { ListOfCategories } from './Components/ListOfCategories';
+import { ListOfPhotoCards } from './container/ListOfPhotoCards';
 import { Logo } from './Components/Logo';
-import { Mensajeria } from './Components/Mensajeria';
-import { GlobalStyle } from "./styles/GlobalStyles";
+import { GlobalStyle } from './styles/GlobalStyles';
+// import { PhotoCardWithQuery } from './container/PhotoCardWithQuery.jsx';
 
 export const App = () => {
+  const urlParams = new window.URLSearchParams(window.location.search);
+  const detailId = urlParams.get('detail');
   return (
     <div>
       <GlobalStyle />
       <Logo />
-      <Mensajeria />
-      <ListOfCategories />
-      <ListOfPhotoCards />
+      {detailId ? (
+        // <PhotoCardWithQuery id={detailId} />
+        <div>
+          <h1 style={{ margin: 'auto', textAlign: 'center' }}>
+            te falta practica bro
+          </h1>
+          <h2 style={{ margin: 'auto', textAlign: 'center' }}>
+            sigue asi , lo lograras!
+          </h2>
+        </div>
+      ) : (
+        <Fragment>
+          <ListOfCategories />
+          <ListOfPhotoCards categoryId={1} />
+        </Fragment>
+      )}
     </div>
   );
 };
